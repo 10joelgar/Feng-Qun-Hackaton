@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feng Qun | Recetas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <strong>Feng Qun</strong>
+      <div>
+        <a href="index.html">Inicio</a>
+        <a href="principal.html">Quiénes somos</a>
+        <a href="hola.html">Productos</a>
+        <a href="recetas.html">Recetas</a>
+        <a href="stock.html">Stock</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="badge">Asistente de recetas</span>
+        <h1>Descubre recetas rápidas con lo que tenemos hoy</h1>
+        <p>Escribe los ingredientes que tienes y nuestro chatbot te propone una opción fresca y práctica para cocinar.</p>
+      </div>
+      <div class="card">
+        <h3>Ejemplo</h3>
+        <p>Prueba con: tomate, pimiento, cebolla o lechuga.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Habla con el chatbot</h2>
+      <label for="ingredients">Ingresa los ingredientes que tienes:</label>
+      <textarea id="ingredients" rows="3" placeholder="Ejemplo: tomate, cebolla y pimiento"></textarea>
+      <button onclick="sugerirReceta()">Sugerir receta</button>
+      <div id="chatOutput" class="chat-output">Hola, estoy listo para ayudarte a cocinar con Feng Qun.</div>
+    </section>
+  </main>
+
+  <footer>Feng Qun · Frescura natural y sabor diario.</footer>
+
+  <script>
+    function sugerirReceta() {
+      const input = document.getElementById('ingredients').value.toLowerCase();
+      const output = document.getElementById('chatOutput');
+      const ingredientes = input.split(',').map(i => i.trim());
+
+      if (!input) {
+        output.innerHTML = 'Escribe al menos un ingrediente para recibir una receta.';
+        return;
+      }
+
+      if (ingredientes.includes('lechuga') && ingredientes.includes('tomate')) {
+        output.innerHTML = 'Receta recomendada: ensalada fresca Feng Qun con lechuga, tomate, cebolla y un toque de aceite.';
+      } else if (ingredientes.includes('pimiento') && ingredientes.includes('cebolla')) {
+        output.innerHTML = 'Receta recomendada: salteado rápido de pimiento y cebolla para servir con arroz o tortillas.';
+      } else if (ingredientes.includes('tomate') && ingredientes.includes('pimiento')) {
+        output.innerHTML = 'Receta recomendada: salsa de tomate y pimiento para acompañar panes o tacos.';
+      } else if (ingredientes.includes('lechuga')) {
+        output.innerHTML = 'Receta recomendada: wrap de lechuga con tomate y cebolla para un almuerzo ligero.';
+      } else {
+        output.innerHTML = 'Podemos preparar una receta sencilla con esos ingredientes. Prueba combinando tomate, cebolla, pimiento o lechuga.';
+      }
+    }
+  </script>
+</body>
+</html>

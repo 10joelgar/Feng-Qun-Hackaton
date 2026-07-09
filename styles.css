@@ -1,0 +1,113 @@
+:root {
+  --green: #2e7d32;
+  --light-green: #e8f5e9;
+  --cream: #fff8e1;
+  --text: #234;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f7fff6 0%, #fefbf0 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  background: var(--green);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+nav a:hover {
+  background: rgba(255,255,255,0.16);
+}
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 3rem;
+}
+.hero, .card, .panel {
+  background: white;
+  border-radius: 20px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.2rem;
+}
+.hero {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+}
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--light-green);
+  color: var(--green);
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.ingredient-card, .recipe-card, .stock-card {
+  background: var(--cream);
+  border: 1px solid #f0e1b8;
+  border-radius: 16px;
+  padding: 1rem;
+}
+button, input, textarea {
+  font: inherit;
+}
+button {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+button:hover { opacity: 0.95; }
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #c8d8c1;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+.chat-output {
+  min-height: 120px;
+  background: #f9fff9;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px dashed #b9d8b4;
+  margin-top: 0.8rem;
+}
+footer {
+  text-align: center;
+  color: #5f6f5f;
+  padding: 1rem 1.2rem 2rem;
+}
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  nav { justify-content: center; }
+}
