@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPC CAMP - Hort Ecològic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">UPC CAMP HORT</a>
+      <nav>
+        <a href="index.html" id="navHome" data-i18n="nav-home">Inici</a>
+        <a href="qui-som.html" id="navAbout" data-i18n="nav-about">Qui Som</a>
+        <a href="productes.html" id="navProducts" data-i18n="nav-products">Productes</a>
+        <a href="receptes.html" id="navRecipes" data-i18n="nav-recipes">Receptes</a>
+        <a href="stock.html" id="navStock" data-i18n="nav-stock">Estoc</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelector" class="lang-select">
+          <option value="ca">CA</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <h1 data-i18n="hero-title">L'Hort Ecològic del Campus <span>UPC CAMP</span></h1>
+    <p data-i18n="hero-desc">Un ecosistema d'agricultura intel·ligent i sostenible integrat al cor de la UPC Castelldefels. Innovació tecnològica aplicada a la terra.</p>
+    <div class="hero-btns">
+      <a href="productes.html" class="btn-primary" data-i18n="btn-explore">Explorar Productes</a>
+      <a href="receptes.html" class="btn-secondary" data-i18n="btn-chat">Parlar amb IA</a>
+    </div>
+  </section>
+
+  <div class="stats-container">
+    <div class="glass-card stat-card">
+      <h3 data-target="9755.76">0</h3>
+      <p data-i18n="stat-surf">Superfície</p>
+    </div>
+    <div class="glass-card stat-card">
+      <h3 data-target="7">0</h3>
+      <p data-i18n="stat-prod">Varietats</p>
+    </div>
+    <div class="glass-card stat-card">
+      <h3 data-target="5">0</h3>
+      <p data-i18n="stat-team">Investigadors</p>
+    </div>
+    <div class="glass-card stat-card">
+      <h3 data-target="98">0</h3>
+      <p data-i18n="stat-tech">Eficiència %</p>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <h2 class="section-title" data-i18n="sec-about-title">El Nostre Projecte</h2>
+    <div class="grid-2">
+      <div class="glass-card" style="display:flex; flex-direction:column; justify-content:center;">
+        <h3 style="color:var(--nature-green); margin-bottom:15px;"><i class="fas fa-seedling"></i> Sostenibilitat de KM-0</h3>
+        <p>L'hort utilitza avançats mètodes d'agricultura biològica controlada combinats amb sistemes automatitzats de reg per goteig de precisió, garantint el mínim consum hídric i zero residus químics.</p>
+      </div>
+      <div class="glass-card" style="padding:0; overflow:hidden; border-radius:var(--radius); min-height:250px; background: url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80') center/cover;">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Hackaton UPC CAMP © 2026</div>
+    <p>Desenvolupat amb esperit d'innovació agrotech al campus de Castelldefels.</p>
+  </footer>
+
+  <script src="js/traduccions.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('navHome').classList.add('active');</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receptes Intel·ligents - UPC CAMP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .chat-container { height: 400px; overflow-y: auto; background: rgba(0,0,0,0.02); padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 15px; }
+    .dark-mode .chat-container { background: rgba(255,255,255,0.02); }
+    .recipe-badge { font-size: 11px; padding: 4px 8px; border-radius: 20px; font-weight: bold; display: inline-block; margin-bottom: 8px; }
+    .badge-propia { background: #e0f2fe; color: #0369a1; }
+    .badge-ia { background: #f3e8ff; color: #6b21a8; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">UPC CAMP HORT</a>
+      <nav>
+        <a href="index.html" id="navHome" data-i18n="nav-home">Inici</a>
+        <a href="qui-som.html" id="navAbout" data-i18n="nav-about">Qui Som</a>
+        <a href="productes.html" id="navProducts" data-i18n="nav-products">Productes</a>
+        <a href="receptes.html" id="navRecipes" data-i18n="nav-recipes">Receptes</a>
+        <a href="stock.html" id="navStock" data-i18n="nav-stock">Estoc</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelector" class="lang-select">
+          <option value="ca">CA</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <section style="padding-top:140px;">
+    <h2 class="section-title" data-i18n="nav-recipes">Cuina Sostenible de Proximitat</h2>
+    
+    <div class="grid-2" style="align-items: start; margin-bottom: 40px;">
+      <div>
+        <h3 style="margin-bottom:20px;"><i class="fas fa-utensils"></i> Receptes Destacades</h3>
+        
+        <div class="glass-card" style="margin-bottom:20px;">
+          <span class="recipe-badge badge-propia">Pròpia de l'Hort</span>
+          <h4>Amanida fresca de Tomàquet i Cogombre</h4>
+          <p style="font-size:14px; color:var(--text-muted); margin: 6px 0;">Tallar verdures fines, afegir oli d'oliva de qualitat i alfàbrega fresca per a un plat refrescant instantani.</p>
+          <small><i class="far fa-clock"></i> 10 min | <i class="fas fa-layer-group"></i> Fàcil</small>
+        </div>
+
+        <div class="glass-card">
+          <span class="recipe-badge badge-ia">Generada amb Intel·ligència Artificial</span>
+          <h4>Gaspatxo de Síndria Avançat</h4>
+          <p style="font-size:14px; color:var(--text-muted); margin: 6px 0;">Un match agosarat de tomàquets i polpa de síndria de l'hort. Perfecte anti-malbaratament.</p>
+          <small><i class="far fa-clock"></i> 15 min | <i class="fas fa-layer-group"></i> Fàcil</small>
+        </div>
+      </div>
+
+      <div class="glass-card">
+        <h3 style="margin-bottom:15px;"><i class="fas fa-robot"></i> Assistent de l'Hort IA</h3>
+        <p style="font-size:13px; color:var(--text-muted); margin-bottom:15px;">Demana consells de cultiu, idees nutricionals i solucions residu zero en temps real.</p>
+        
+        <div id="chatMessages" class="chat-container">
+          <div style="margin-bottom:15px; padding:12px 16px; border-radius:12px; background:var(--border-color); max-width:80%; margin-right:auto;">
+            Hola! Soc l'assistent de l'hort del campus de la UPC. Quins ingredients tens a la teva disposició o què t'agradaria plantar avui?
+          </div>
+        </div>
+
+        <form id="chatForm" style="display:flex; gap:10px;">
+          <input id="chatInput" type="text" data-i18n="chat-placeholder" placeholder="Pregunta a la IA de l'hort..." style="flex:1; padding:12px; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-primary); color:var(--text-main);" required>
+          <button type="submit" class="btn-primary" style="padding:12px 20px;" data-i18n="btn-send">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Hackaton UPC CAMP © 2026</div>
+    <p>Desenvolupat amb esperit d'innovació agrotech al campus de Castelldefels.</p>
+  </footer>
+
+  <script src="js/traduccions.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>document.getElementById('navRecipes').classList.add('active');</script>
+</body>
+</html>

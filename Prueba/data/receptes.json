@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "titol": "Amanida fresca de Tomàquet i Cogombre",
+    "tipus": "propia",
+    "ingredients": ["Tomàquet", "Cogombre", "Oli d'oliva", "Sal", "Alfàbrega"],
+    "preparacio": "Tallar els tomàquets i els cogombres a rodanxes fines. Barrejar en un bol, amanir amb oli d'oliva verge extra, un polsim de sal i fulles d'alfàbrega fresca.",
+    "temps": "10 min",
+    "dificultat": "Fàcil",
+    "imatge": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    "id": 2,
+    "titol": "Albergínies al forn amb Pebrot",
+    "tipus": "propia",
+    "ingredients": ["Albergínia", "Pebrot", "All", "Llorer", "Oli"],
+    "preparacio": "Tallar l'albergínia i els pebrots a tires. Posar al forn a 180°C durant 35 minuts amb all aixafat, llorer i un bon raig d'oli.",
+    "temps": "45 min",
+    "dificultat": "Mitjana",
+    "imatge": "https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    "id": 3,
+    "titol": "Gaspatxo de Síndria UPC",
+    "tipus": "ia",
+    "ingredients": ["Síndria", "Tomàquet", "Pebrot", "Pa de l'endemà", "Vinagre"],
+    "preparacio": "Triturar la síndria sense llavors juntament amb els tomàquets, una mica de pebrot i el pa. Afegir vinagre, oli i refredar a la nevera.",
+    "temps": "15 min",
+    "dificultat": "Fàcil",
+    "imatge": "https://images.unsplash.com/photo-1572656631137-7935297eff55?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    "id": 4,
+    "titol": "Crema de Mongeta Verda i Meló sorprenent",
+    "tipus": "ia",
+    "ingredients": ["Mongeta verda", "Meló", "Ceba", "Caldo vegetal"],
+    "preparacio": "Bullir les mongetes amb la ceba. Triturar i deixar refredar. Afegir daus de meló fresc per sobre abans de servir per a un contrast únic.",
+    "temps": "30 min",
+    "dificultat": "Mitjana",
+    "imatge": "https://images.unsplash.com/photo-1607532941433-304659e8198a?auto=format&fit=crop&w=500&q=80"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {"id": 1, "nom": "Mongeta verda", "quantitat": 120, "estat": "Disponible", "categoria": "Verdura"},
+  {"id": 2, "nom": "Tomàquet", "quantitat": 45, "estat": "Poc stock", "categoria": "Verdura"},
+  {"id": 3, "nom": "Albergínia", "quantitat": 0, "estat": "Esgotat", "categoria": "Verdura"},
+  {"id": 4, "nom": "Pebrot", "quantitat": 85, "estat": "Disponible", "categoria": "Verdura"},
+  {"id": 5, "nom": "Cogombre", "quantitat": 15, "estat": "Poc stock", "categoria": "Verdura"},
+  {"id": 6, "nom": "Síndria", "quantitat": 60, "estat": "Disponible", "categoria": "Fruita"},
+  {"id": 7, "nom": "Meló", "quantitat": 40, "estat": "Disponible", "categoria": "Fruita"}
+]

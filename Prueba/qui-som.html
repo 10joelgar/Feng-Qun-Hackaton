@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qui Som - UPC CAMP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">UPC CAMP HORT</a>
+      <nav>
+        <a href="index.html" id="navHome" data-i18n="nav-home">Inici</a>
+        <a href="qui-som.html" id="navAbout" data-i18n="nav-about">Qui Som</a>
+        <a href="productes.html" id="navProducts" data-i18n="nav-products">Productes</a>
+        <a href="receptes.html" id="navRecipes" data-i18n="nav-recipes">Receptes</a>
+        <a href="stock.html" id="navStock" data-i18n="nav-stock">Estoc</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelector" class="lang-select">
+          <option value="ca">CA</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <section style="padding-top:140px;">
+    <h2 class="section-title" data-i18n="nav-about">Qui Som</h2>
+    
+    <div class="grid-3 reveal" style="margin-bottom:60px;">
+      <div class="glass-card">
+        <h3 style="margin-bottom:10px; color:var(--upc-blue);" data-i18n="mission-title">Missió</h3>
+        <p data-i18n="mission-desc">Promoure l'alimentació km0, la sostenibilitat i la recerca activa en tècniques de cultiu biològiques controlades digitalment.</p>
+      </div>
+      <div class="glass-card">
+        <h3 style="margin-bottom:10px; color:var(--nature-green);" data-i18n="vision-title">Visió</h3>
+        <p data-i18n="vision-desc">Ser el referent d'hort intel·ligent universitari a Europa per a l'any 2030.</p>
+      </div>
+      <div class="glass-card">
+        <h3 style="margin-bottom:10px; color:var(--text-main);" data-i18n="values-title">Valors</h3>
+        <p data-i18n="values-desc">Sostenibilitat, Excel·lència Tecnològica, Treball Col·laboratiu i Economia Circular.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title" data-i18n="sec-team-title">Equip d'Innovadors</h2>
+    <div class="grid-3 reveal" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="glass-card" style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--accent-gradient); border-radius:50%; margin:0 auto 15px auto; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">J</div>
+        <h4>Joel</h4>
+        <p style="font-size:12px; color:var(--text-muted);">Lead Architect</p>
+      </div>
+      <div class="glass-card" style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--accent-gradient); border-radius:50%; margin:0 auto 15px auto; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">S</div>
+        <h4>Sergi</h4>
+        <p style="font-size:12px; color:var(--text-muted);">Data Scientist</p>
+      </div>
+      <div class="glass-card" style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--accent-gradient); border-radius:50%; margin:0 auto 15px auto; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">À</div>
+        <h4>Àngel</h4>
+        <p style="font-size:12px; color:var(--text-muted);">AgroTech Engineer</p>
+      </div>
+      <div class="glass-card" style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--accent-gradient); border-radius:50%; margin:0 auto 15px auto; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">M</div>
+        <h4>Marc</h4>
+        <p style="font-size:12px; color:var(--text-muted);">Frontend Dev</p>
+      </div>
+      <div class="glass-card" style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--accent-gradient); border-radius:50%; margin:0 auto 15px auto; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">J</div>
+        <h4>Jordi</h4>
+        <p style="font-size:12px; color:var(--text-muted);">AI Specialist</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Hackaton UPC CAMP © 2026</div>
+    <p>Desenvolupat amb esperit d'innovació agrotech al campus de Castelldefels.</p>
+  </footer>
+
+  <script src="js/traduccions.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('navAbout').classList.add('active');</script>
+</body>
+</html>

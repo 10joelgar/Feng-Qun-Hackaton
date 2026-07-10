@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard d'Estoc - UPC CAMP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+    .chart-box { height: 260px; position: relative; margin-top: 15px; }
+    .filter-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .filter-btn { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 13px; opacity: 0.6; transition: opacity 0.2s; }
+    table { width:100%; border-collapse: collapse; text-align: left; }
+    th { padding: 16px; background: rgba(0,0,0,0.02); font-weight: 700; border-bottom: 2px solid var(--border-color); }
+    .dark-mode th { background: rgba(255,255,255,0.02); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">UPC CAMP HORT</a>
+      <nav>
+        <a href="index.html" id="navHome" data-i18n="nav-home">Inici</a>
+        <a href="qui-som.html" id="navAbout" data-i18n="nav-about">Qui Som</a>
+        <a href="productes.html" id="navProducts" data-i18n="nav-products">Productes</a>
+        <a href="receptes.html" id="navRecipes" data-i18n="nav-recipes">Receptes</a>
+        <a href="stock.html" id="navStock" data-i18n="nav-stock">Estoc</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelector" class="lang-select">
+          <option value="ca">CA</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <section style="padding-top:140px;">
+    <h2 class="section-title">Panell de Control i Estoc Real</h2>
+    
+    <div style="margin-bottom:25px; display:flex; gap:15px; flex-wrap:wrap; align-items:center;">
+      <input id="stockSearch" type="text" data-i18n="search-placeholder" placeholder="Cerca..." style="padding:10px 15px; width:100%; max-width:300px; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-surface); color:var(--text-main);">
+      
+      <div class="filter-bar">
+        <button class="filter-btn" data-filter="all" style="opacity:1;" data-i18n="filter-all">Tots</button>
+        <button class="filter-btn" data-filter="disponible">Disponible</button>
+        <button class="filter-btn" data-filter="poc">Poc stock</button>
+        <button class="filter-btn" data-filter="esgotat">Esgotat</button>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="glass-card" style="overflow-x: auto; padding:0;">
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Quantitat</th>
+              <th>Estat</th>
+              <th>Categoria</th>
+            </tr>
+          </thead>
+          <tbody id="stockTableBody">
+            </tbody>
+        </table>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:30px;">
+        <div class="glass-card">
+          <h4>Quantitats per Producte</h4>
+          <div class="chart-box">
+            <canvas id="qtyChart"></canvas>
+          </div>
+        </div>
+        <div class="glass-card">
+          <h4>Mètrica d'Estat General</h4>
+          <div class="chart-box">
+            <canvas id="statusChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Hackaton UPC CAMP © 2026</div>
+    <p>Desenvolupat amb esperit d'innovació agrotech al campus de Castelldefels.</p>
+  </footer>
+
+  <script src="js/traduccions.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/stock.js"></script>
+  <script src="js/grafiques.js"></script>
+  <script>document.getElementById('navStock').classList.add('active');</script>
+</body>
+</html>

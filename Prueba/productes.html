@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productes - UPC CAMP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .prod-img { width:100%; height:200px; object-fit:cover; border-radius:12px; margin-bottom:15px; }
+    .meta-box { background:rgba(0,0,0,0.03); padding:10px; border-radius:8px; font-size:12px; margin:10px 0; }
+    .dark-mode .meta-box { background:rgba(255,255,255,0.05); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">UPC CAMP HORT</a>
+      <nav>
+        <a href="index.html" id="navHome" data-i18n="nav-home">Inici</a>
+        <a href="qui-som.html" id="navAbout" data-i18n="nav-about">Qui Som</a>
+        <a href="productes.html" id="navProducts" data-i18n="nav-products">Productes</a>
+        <a href="receptes.html" id="navRecipes" data-i18n="nav-recipes">Receptes</a>
+        <a href="stock.html" id="navStock" data-i18n="nav-stock">Estoc</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelector" class="lang-select">
+          <option value="ca">CA</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <section style="padding-top:140px;">
+    <h2 class="section-title" data-i18n="nav-products">Productes del Campus</h2>
+    
+    <div class="prod-grid">
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1567375695344-2d3be5456e2d?auto=format&fit=crop&w=500&q=80" alt="Mongeta verda">
+        <h3>Mongeta verda</h3>
+        <p style="font-size:14px; margin-top:5px;">Recollida diària directament de la nostra zona exterior protegida.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Alta en fibra, antioxidant natural.<br>
+          <strong>Nutrició:</strong> 31 kcal, Vitamina C i K.<br>
+          <strong>Estat:</strong> <span class="pulse-badge"></span> Excel·lent maduració
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=500&q=80" alt="Tomàquet">
+        <h3>Tomàquet</h3>
+        <p style="font-size:14px; margin-top:5px;">Varietat local dolça i carnosa de l'hivernacle intel·ligent del campus.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Millora la visió i la salut cardiovascular.<br>
+          <strong>Nutrició:</strong> 18 kcal, Ric en Licopè.<br>
+          <strong>Estat:</strong> <span class="pulse-badge warning"></span> Estoc limitat
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" alt="Albergínia">
+        <h3>Albergínia</h3>
+        <p style="font-size:14px; margin-top:5px;">Cultivada de forma totalment orgànica lliure de pesticides urbans.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Gran depuratiu i protector digestiu.<br>
+          <strong>Nutrició:</strong> 25 kcal, Alta en potassi.<br>
+          <strong>Estat:</strong> <span class="pulse-badge danger"></span> Temporada acabada
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1563565042-883a76a5122c?auto=format&fit=crop&w=500&q=80" alt="Pebrot">
+        <h3>Pebrot</h3>
+        <p style="font-size:14px; margin-top:5px;">Vermells i verds super vius plens d'aigua pura i nutrients essencials.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Enorme font de Vitamina C concentrada.<br>
+          <strong>Nutrició:</strong> 20 kcal, Baix índex glucèmic.<br>
+          <strong>Estat:</strong> <span class="pulse-badge"></span> Disponible en camp
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1604974449218-9ca3d39025a6?auto=format&fit=crop&w=500&q=80" alt="Cogombre">
+        <h3>Cogombre</h3>
+        <p style="font-size:14px; margin-top:5px;">Cruixents i refrescants gràcies al control constant del reg hidropònic.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Hidratació màxima de la pell i l'organisme.<br>
+          <strong>Nutrició:</strong> 15 kcal, Ric en minerals.<br>
+          <strong>Estat:</strong> <span class="pulse-badge warning"></span> Poc estoc residual
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=500&q=80" alt="Síndria">
+        <h3>Síndria</h3>
+        <p style="font-size:14px; margin-top:5px;">Grans peces dolces de secà recolzades en la zona sud del campus exterior.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Excel·lent diürètic natural i energitzant.<br>
+          <strong>Nutrició:</strong> 30 kcal, L-citrul·lina beneficiosa.<br>
+          <strong>Estat:</strong> <span class="pulse-badge"></span> Recollida òptima
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <img class="prod-img" src="https://images.unsplash.com/photo-1571731921022-a21afc37324d?auto=format&fit=crop&w=500&q=80" alt="Meló">
+        <h3>Meló</h3>
+        <p style="font-size:14px; margin-top:5px;">Meló de tot l'any amb una dolçor controlada per refractòmetres digitals.</p>
+        <div class="meta-box">
+          <strong>Beneficis:</strong> Ric en beta-carotens protectors.<br>
+          <strong>Nutrició:</strong> 34 kcal, Sabor intens de proximitat.<br>
+          <strong>Estat:</strong> <span class="pulse-badge"></span> Disponible immediat
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Hackaton UPC CAMP © 2026</div>
+    <p>Desenvolupat amb esperit d'innovació agrotech al campus de Castelldefels.</p>
+  </footer>
+
+  <script src="js/traduccions.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('navProducts').classList.add('active');</script>
+</body>
+</html>
